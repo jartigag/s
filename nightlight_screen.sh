@@ -1,3 +1,4 @@
+#!/bin/bash
 
 REQUIRED_PKG="x11-xserver-utils"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
