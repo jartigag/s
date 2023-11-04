@@ -16,14 +16,17 @@ if [ "" = "$PKG_OK" ]; then
   sudo apt --yes install $REQUIRED_PKG
 fi
 
-windowTitle=$1
-widFile=$2
+windowTitle="$1"
+widFile="$2"
+
+echo $windowTitle
+echo $widFile
 
 if [ ! -f $widFile ]; then
-        flagDone=`wmctrl -l | grep $windowTitle | cut -d " " -f1`
+        flagDone=`wmctrl -l | grep "$windowTitle" | cut -d " " -f1`
         while [ -z "$flagDone" ]
         do
-                flagDone=`wmctrl -l | grep $windowTitle | cut -d " " -f1`
+                flagDone=`wmctrl -l | grep "$windowTitle" | cut -d " " -f1`
                 sleep 1
         done
         echo "$flagDone" > $widFile
