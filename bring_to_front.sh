@@ -23,10 +23,10 @@ echo $windowTitle
 echo $widFile
 
 if [ ! -f $widFile ]; then
-        flagDone=`wmctrl -l | grep "$windowTitle" | cut -d " " -f1`
+        flagDone=`wmctrl -l | grep -i "$windowTitle" | cut -d " " -f1`
         while [ -z "$flagDone" ]
         do
-                flagDone=`wmctrl -l | grep "$windowTitle" | cut -d " " -f1`
+                flagDone=`wmctrl -l | grep -i "$windowTitle" | cut -d " " -f1`
                 sleep 1
         done
         echo "$flagDone" > $widFile
