@@ -1,0 +1,3 @@
+[submodule "obsidian-todos-sort"]
+	path = obsidian-todos-sort
+	url = https://github.com/jsifalda/obsidian-todos-sort.git
