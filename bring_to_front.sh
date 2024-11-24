@@ -1,7 +1,7 @@
 #!/bin/bash
 #author: @jartigag
-#date: 2022-03-02
-#version: 1.0
+#date: 2024-11-24
+#version: 1.1
 #
 # The idea is to associate a keyboard shortcut with this script + "TargetWindowName",
 # so it brings the desired window to front when a shortcut is pressed.
@@ -18,9 +18,6 @@ fi
 
 windowTitle="$1"
 widFile="$2"
-
-echo $windowTitle
-echo $widFile
 
 if [ ! -f $widFile ]; then
         flagDone=`wmctrl -l | grep -i "$windowTitle" | cut -d " " -f1`
